@@ -1,5 +1,7 @@
 const express = require('express');
 const app = express();
+app.set('view engine', 'pug');
+app.set('views', './views');
 
 app.use('/store', function(req, res, next) {
   console.log('Hey, im a middleware! :)');
@@ -7,11 +9,11 @@ app.use('/store', function(req, res, next) {
 });
 
 app.get('/', function(req, res) {
-  res.send('Hello World');
+  res.render('content');
 });
 
-app.get('/store', function(req, res) {
-  res.send('This is market');
+app.get('/log', function(req, res) {
+  res.render('log');
 });
 
 app.listen(3000);

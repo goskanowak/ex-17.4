@@ -1,0 +1,20 @@
+html
+  head
+    title Example page
+  body(style={'text-align': 'center'})
+    include ./header.pug
+      form(style={padding: '10px'}) User name: 
+        input(
+          type='text'
+          name='username'
+          placeholder='Your name'
+        )
+      form Password: 
+        input(
+          type='password'
+          name='password'
+          maxlength='15'
+          placeholder='Your password'
+        )
+      button(type='submit') Log in
+      include ./footer.pug
