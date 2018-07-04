@@ -1,17 +1,18 @@
-doctype html(lang='en')
-head
+doctype html
+html(lang='en')
+  head
     meta(charset="utf-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title Example page
-body(style={'text-align': 'center'})
+  body(style={'text-align': 'center'})
     include ./header.pug
-      form(style={padding: '10px'}) User name: 
+      label(style={display: 'block', margin: '10px'}) User name: 
         input(
           type='text'
           name='username'
           placeholder='Your name'
         )
-      form Password: 
+      label(style={display: 'block', margin: '10px'}) Password: 
         input(
           type='password'
           name='password'
@@ -19,5 +20,5 @@ body(style={'text-align': 'center'})
           placeholder='Your password'
         )
       button
-        a(href="/log")(style={'text-decoration': 'none'}) Log in
+        a(href="/log", style={'text-decoration': 'none'}) Log in
       include ./footer.pug
