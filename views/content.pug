@@ -6,19 +6,19 @@ html(lang='en')
     title Example page
   body(style={'text-align': 'center'})
     include ./header.pug
-      label(style={display: 'block', margin: '10px'}) User name: 
-        input(
-          type='text'
-          name='username'
-          placeholder='Your name'
-        )
-      label(style={display: 'block', margin: '10px'}) Password: 
-        input(
-          type='password'
-          name='password'
-          maxlength='15'
-          placeholder='Your password'
-        )
-      button
-        a(href="/log", style={'text-decoration': 'none'}) Log in
+      form(style={display: 'block', margin: '10px'}) 
+        label User name: 
+          input(
+            type='text'
+            name='username'
+            placeholder='Your name'
+          )
+        label Password: 
+          input(
+            type='password'
+            name='password'
+            maxlength='15'
+            placeholder='Your password'
+          )
+      a(href="/log") Log in
       include ./footer.pug
