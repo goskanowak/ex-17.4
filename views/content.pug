@@ -1,0 +1,24 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Example page
+  body(style={'text-align': 'center'})
+    include ./header.pug
+      form(style={display: 'block', margin: '10px'}) 
+        label User name: 
+          input(
+            type='text'
+            name='username'
+            placeholder='Your name'
+          )
+        label Password: 
+          input(
+            type='password'
+            name='password'
+            maxlength='15'
+            placeholder='Your password'
+          )
+      a(href="/log") Log in
+      include ./footer.pug
